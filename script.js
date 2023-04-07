@@ -1,11 +1,18 @@
 window.onload = function() {
-    // Seleciona o elemento span pelo ID
-    var meuSpan = document.getElementById("meu-span");
-    console.log(meuSpan);
-    // Adiciona um ouvinte de evento para o clique
-    meuSpan.addEventListener("click", function() {
-      // Define o código que será executado quando o span for clicado
-      alert("O span foi clicado!");
-    });
+  const myInput = document.getElementById("myInput");
+  const audio = document.getElementById('meu-audio');
+  const playButton = document.querySelector('.play-button');
+  
+  myInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      alert(myInput.value);
+    }
+  });
+
+
+  playButton.addEventListener('click', () => {
+    audio.play();
+  });
+  
   }
   

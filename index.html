@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <!-- As a link -->
+
     <header>
         <div class="container">
             <nav class="navbar navbar-expand-lg">
@@ -32,11 +32,10 @@
                     <img src="assets/icon.png" alt="" style="height: 50px; width: auto" />
                 </a>
 
-
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button"
+                        <div class="dropdown" >
+                            <a class="btn btn-sm dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Serif
                             </a>
@@ -66,10 +65,7 @@
             <div class="row">
                 <div class="form-group">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <div class="input-group-append">
-                            <span id="meu-span" class="input-group-text"><i class="bi bi-search"></i></span>
-                        </div>
+                        <input id="myInput" type="text" class="form-control input-with-icon" placeholder="Search">
                     </div>
                 </div>
             </div>
@@ -84,11 +80,37 @@
                     <h2>/ˈkiːbɔːd/</h2>
                 </div>
                 <div class="col-sm-2">
-                    <audio id="meu-audio" src="caminho/do/arquivo-de-audio.mp3"></audio>
-                    <button class="play-button"><i class="fa fa-play"></i></button>
+                    <audio id="meu-audio" src="https://api.dictionaryapi.dev/media/pronunciations/en/hello-au.mp3"></audio>
+                    <button id="play-button" class="play-button"><i class="fa fa-play"></i></button>
                 </div>
             </div>
+
+            <div class="d-flex separator">
+                <div class="flex-shrink-0" >
+                    <p>Exemplo</p>
+                </div>
+                <div class="flex-grow-1" >
+                    <hr class="linha-horizontal" style="height: 5px; border-color: red;">
+                </div>
+            </div>
+
+            <div id="word-definition" class="d-flex flex-column">
+                <h3>Meaning</h3>
+                <ul>
+                    <li>"(etc.) A set of keys used to operate a typewriter, computer etc."</li>
+                    <li>"A component of many instruments including the piano, organ, and harpsichord consisting of usually
+                        black and white keys that cause different tones to be produced when struck."</li>
+                    <li>"A device with keys of a musical keyboard, used to control electronic sound-producing devices which
+                        may be built into or separate from the keyboard device."</li>
+                  </ul>
+            </div>
+
             <div class="d-flex">
+                <h3>Synonyms</h3> 
+                <h4>electronic keyboard</h4>
+            </div>
+
+            <div class="d-flex separator">
                 <div class="flex-shrink-0">
                     <p>Exemplo</p>
                 </div>
@@ -96,29 +118,24 @@
                     <hr class="linha-horizontal" style="height: 5px; border-color: red;">
                 </div>
             </div>
-            <div class="d-flex flex-column">
+
+            <div id="usage-example" class="d-flex flex-column">
                 <h3>Meaning</h3>
-                <p>"(etc.) A set of keys used to operate a typewriter, computer etc."</p>
-                <p>"A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck."</p>
-                <p>"A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device."</p>
-              </div>
-              <div class="d-flex">
-                <h3>Synonyms</h3>
-                <h4>electronic keyboard</h4>
-              </div>
-              <h3>Meaning</h3>
-              <p>To type on a computer keyboard</p>
-              <h6>"Keyboarding is the part of this job i hate the most"</h6>
+                <ul>
+                    <li>To type on a computer keyboard</li>
+                    <li>"Keyboarding is the part of this job i hate the most"</li>
+                  </ul>
+            </div>
         </div>
     </main>
 
-    <footer class="footer bg-light">
+    <!-- <footer class="footer bg-light">
         <div class="container">
-          <span class="text-muted">Copyright © 2023
-          </span>
+            <span class="text-muted">Copyright © 2023
+            </span>
         </div>
-      </footer>
-      
+    </footer> -->
+
 
 </body>
 
