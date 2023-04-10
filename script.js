@@ -28,6 +28,8 @@ function buildMain(data) {
   updateDictionaryHeader(data[0]);
   updateWordDefinition(data[0]);
   updateSynonymsNoun(data[0]);
+  updateVerbDefinition(data[0]);
+  updateSynonymsVerb(data[0]);
 }
 
 function search (event) {
@@ -40,10 +42,11 @@ function search (event) {
   }
 }
 
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', async function() {
+  
   getDictionaryDefinition(firstWord)
     .then(data => {
       buildMain(data)
     })
     .catch(error => console.error(error));
-}
+});
