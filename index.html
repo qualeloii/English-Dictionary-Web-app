@@ -19,9 +19,10 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
 
-    <script src="script.js"></script>
-    <script src="mainSection.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="js/script.js"></script>
+    <script src="js/mainSection.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/fonts.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 
 <body>
@@ -33,25 +34,25 @@
                     <img src="assets/icon.png" alt="" style="height: 50px; width: auto" />
                 </a>
 
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto flex-row">
                     <li class="nav-item">
-                        <div class="dropdown" >
-                            <a class="btn btn-sm dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="dropdown">
+                            <a id="selectedFont" class="btn btn-sm dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Serif
                             </a>
 
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a onclick="changeFont(this)" class="dropdown-item" href="#">serif</a></li>
+                                <li><a onclick="changeFont(this)" class="dropdown-item" href="#">Display</a></li>
+                                <li><a onclick="changeFont(this)" class="dropdown-item" href="#">Handwriting</a></li>
                             </ul>
                         </div>
                     </li>
 
                     <li class="nav-item">
                         <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                            <input onclick="handleCheckboxClick()"class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                             <label class="form-check-label" for="flexSwitchCheckDefault"><i
                                     class="bi bi-moon"></i></label>
                         </div>
@@ -66,7 +67,8 @@
             <div class="row">
                 <div class="form-group">
                     <div class="input-group">
-                        <input onkeydown="search(event)" id="myInput" type="text" class="form-control input-with-icon" placeholder="Search">
+                        <input onkeydown="search(event)" id="myInput" type="text" class="form-control input-with-icon"
+                            placeholder="Search">
                     </div>
                 </div>
             </div>
@@ -76,30 +78,37 @@
     <main>
         <div class="container">
             <div id="dictionary-header" class="row">
-                <!-- <div class="col-sm-10">
-                    <h1>Keyboard</h1>
-                    <h2>/ˈkiːbɔːd/</h2>
+                <div class="col-10">
+                    <h1>hello</h1>
+                    <h2>/həˈləʊ/</h2>
                 </div>
-                <div class="col-sm-2">
-                    <audio id="meu-audio" src="https://api.dictionaryapi.dev/media/pronunciations/en/hello-au.mp3"></audio>
-                    <button onclick="playAudio()" id="play-button" class="play-button"><i class="fa fa-play"></i></button>
-                </div> -->
+                <div class="col-2">
+                    <audio id="meu-audio"
+                        src="https://api.dictionaryapi.dev/media/pronunciations/en/hello-au.mp3"></audio>
+                    <button onclick="playAudio()" id="play-button" class="play-button"><i
+                            class="fa fa-play"></i></button>
+                </div>
+            </div>
+
+            <div class="d-flex separator">
+                <div class="flex-shrink-0">
+                    <p>noun</p>
+                </div>
+                <div class="flex-grow-1">
+                    <hr class="linha-horizontal" style="height: 5px; border-color: red;">
+                </div>
             </div>
 
             <div id="word-definition" class="d-flex flex-column">
-                <!-- <h3>Meaning</h3>
+                <h3>Meaning</h3>
                 <ul>
-                    <li>"(etc.) A set of keys used to operate a typewriter, computer etc."</li>
-                    <li>"A component of many instruments including the piano, organ, and harpsichord consisting of usually
-                        black and white keys that cause different tones to be produced when struck."</li>
-                    <li>"A device with keys of a musical keyboard, used to control electronic sound-producing devices which
-                        may be built into or separate from the keyboard device."</li>
-                  </ul> -->
+                    <li>"Hello!" or an equivalent greeting.</li>
+                </ul>
             </div>
 
             <div id="synonyms-noun" class="d-flex">
-                <!-- <h3>Synonyms</h3> 
-                <h4>electronic keyboard</h4> -->
+                <h3>Synonyms</h3>
+                <h4>greeting</h4>
             </div>
 
             <div class="d-flex separator">
@@ -112,16 +121,13 @@
             </div>
 
             <div id="usage-example" class="d-flex flex-column">
-                <!-- <h3>Meaning</h3>
+                <h3>Meaning</h3>
                 <ul>
-                    <li>To type on a computer keyboard</li>
-                    <li>"Keyboarding is the part of this job i hate the most"</li>
-                  </ul> -->
+                    <li>To greet with "hello".</li>
+                </ul>
             </div>
 
             <div id="synonyms-verb" class="d-flex">
-                <!-- <h3>Synonyms</h3> 
-                <h4>electronic keyboard</h4> -->
             </div>
 
         </div>
